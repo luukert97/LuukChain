@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Blockchain in your Browser</title>
+    <script src="js/index.js" type="application/javascript"></script>
+    <script type="text/javascript" src="jshashes-master/hashes.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+ 
+</head>
+    <body>
+<h1>BlockChain in your Browser</h1>
+
+
+    <div>
+     <button onclick="getElementById('ischainvalid').innerHTML=LuukCoin.isChainValid()">Is the Blockchain still valid?</button>
+    
+    <button onclick="getElementById('ischainvalid').innerHTML=LuukCoin.changeBlock()">Change a block</button>
+
+        
+        <h2 id="ischainvalid"></h2>
+   
+    </div>
+    
+    <script>        
+   
+        
+        
+        
+        
+let LuukCoin = new Blockchain();
+LuukCoin.makenewBlock(new Block(1, "03/01/2018", { amount: 50 }));
+LuukCoin.makenewBlock(new Block(2, "03/01/2018", { amount: 35 }));
+document.write(JSON.stringify(LuukCoin, null, 4));              
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    
+   
+
+</body>
+</html>
